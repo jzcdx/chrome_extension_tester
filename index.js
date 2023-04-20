@@ -14,5 +14,5 @@ document.body.addEventListener('click', function(event) {
 
     clickDiv.style.top = (y - 10).toString() + "px";
     clickDiv.style.left = (x - 10).toString() + "px";
-    //clickLabel.innerHTML = "Click Location: (" + x.toString() + ", " + y.toString() + ")";
+    clickLabel.innerHTML = "Click Location: (" + x.toString() + ", " + y.toString() + ")";
 });

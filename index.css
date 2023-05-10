@@ -18,6 +18,31 @@ body {
     border-radius: 10px;
 }
 
-#clLabel {
+#l1 {
+    display:flex;
+    width:100px;
+    height:100px;
+    background-color:black;
+    color:white;
 
+    align-items:center;
+    justify-content:center;
 }
+
+#l1Light {
+    background-color:rgb(37, 208, 37);
+    display:block;
+    width:10px;
+    height:10px;
+    margin-left:5px;
+
+    border-radius:50px;
+}
+
+.indicatorContainer {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+

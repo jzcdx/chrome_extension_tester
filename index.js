@@ -16,3 +16,7 @@ document.body.addEventListener('click', function(event) {
     clickDiv.style.left = (x - 10).toString() + "px";
     clickLabel.innerHTML = "Click Location: (" + x.toString() + ", " + y.toString() + ")";
 });
+
+document.getElementById("l1").onclick = function () {
+    console.log("helo")
+}

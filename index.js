@@ -42,4 +42,5 @@ document.getElementById("l1").onclick = async function () {
     timeout = setTimeout(() => {
         light.style.display = "none";
     }, 2000); // change 5000 to the number of milliseconds you want to wait before hiding the label
+    //test
 }

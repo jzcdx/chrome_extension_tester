@@ -19,4 +19,10 @@ document.body.addEventListener('click', function(event) {
 
 document.getElementById("l1").onclick = function () {
     console.log("helo")
+    let light = document.getElementById("l1Light");
+    light.style.display = "block";
+
+    setTimeout(() => {
+            light.style.display = "none";
+    }, 3000); // change 5000 to the number of milliseconds you want to wait before hiding the label
 }

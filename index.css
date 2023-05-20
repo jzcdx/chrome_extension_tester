@@ -31,7 +31,7 @@ body {
 
 #l1Light {
     background-color:rgb(37, 208, 37);
-    display:block;
+    display:none;
     width:10px;
     height:10px;
     margin-left:5px;

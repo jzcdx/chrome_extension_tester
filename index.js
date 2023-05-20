@@ -17,12 +17,29 @@ document.body.addEventListener('click', function(event) {
     clickLabel.innerHTML = "Click Location: (" + x.toString() + ", " + y.toString() + ")";
 });
 
-document.getElementById("l1").onclick = function () {
-    console.log("helo")
+let timeout = undefined;
+let flashTimeout = undefined;
+document.getElementById("l1").onclick = async function () {
     let light = document.getElementById("l1Light");
+    if (light.style.display === "block"/* || light.style.display === ""*/) {
+        light.style.display = "none";
+
+        clearTimeout(flashTimeout);
+        let flashPromise = new Promise(resolve => {
+            flashTimeout = setTimeout(() => {
+                light.style.display = "block";
+                resolve()
+            }, 50);
+        }); 
+        await flashPromise
+    } else {
+        light.style.display = "block";
+    }
     light.style.display = "block";
 
-    setTimeout(() => {
-            light.style.display = "none";
-    }, 3000); // change 5000 to the number of milliseconds you want to wait before hiding the label
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        light.style.display = "none";
+    }, 2000); // change 5000 to the number of milliseconds you want to wait before hiding the label
 }
